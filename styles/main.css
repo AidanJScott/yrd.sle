@@ -1,0 +1,85 @@
+html {
+    background-color: black;
+    color: white;
+    font-family: "Rubik Glitch"
+}
+body {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 8rem 4rem 32rem 10rem;
+    margin: 0;
+}
+header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../images/glitch_banner.jpg);
+}
+header h1{
+    color: black;
+    text-shadow: 0 0 2px white;
+    font-size: 450%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* navigation */
+nav {
+    grid-area: nav;
+}
+nav ul {
+    display: grid;
+    grid-template-columns: 20% 12% 12% 12% 12% 12% 20%;
+    grid-template-rows: 1fr;
+    grid-template-areas: "space1 home press_kit music shows contact space2";
+    list-style: none;
+    padding: 0;
+}
+nav li {
+    display: inline-block;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+}
+nav a:hover, nav a:focus {
+    color: "#E834EB";
+}
+#home_nav {grid-area: home;}
+#press_kit_nav{grid-area: press_kit;}
+#music_nav{grid-area: music;}
+#shows_nav{grid-area: shows;}
+#contact_nav{grid-area: contact;}
+
+main {
+    grid-area: main;
+    padding: 1rem 7.5%;
+    text-align: center;
+    background-image: url(../images/glitch_background.png);
+    background-position: center;
+    background-size: 50%;
+}
+#main_img {
+    width: 40%;
+    box-shadow: 0 0 25px white;
+}
+main h2 {
+    margin: 5px;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/* imported font */
+.rubik-glitch-regular {
+  font-family: "Rubik Glitch", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
